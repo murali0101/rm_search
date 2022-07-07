@@ -23,7 +23,7 @@ export const SearchBar = () => {
           zIndex={2}
         />
         <Input
-          type="tel"
+          type="text"
           placeholder="Search for a contact"
           border={0}
           borderRadius={0}
