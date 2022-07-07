@@ -1,4 +1,5 @@
-export const DetailsUserCard = () => {
+export const DetailsUserCard = ({ props }) => {
+  
     return <div>DetailsUserCard</div>;
   };
   
