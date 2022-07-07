@@ -1,9 +1,10 @@
-import { ADD_DATA, Details_User_Card } from "./actionType";
+import { ADD_DATA, ADD_DATA_DETAILS_USER_CARD_DATA, DETAILS_USER_CARD } from "./actionType";
 
 const init = {
   info: {},
   results: [],
   detailsUserCard: false,
+  detailsUserCardData:{}
 };
 
 export const homePageReducer = (state = init, { type, payload }) => {
@@ -11,7 +12,10 @@ export const homePageReducer = (state = init, { type, payload }) => {
     case ADD_DATA: {
       return { ...state, results: payload.results, info: payload.info };
     }
-    case Details_User_Card: {
+    case DETAILS_USER_CARD: {
+      return { ...state, detailsUserCard: payload };
+    }
+    case ADD_DATA_DETAILS_USER_CARD_DATA: {
       return { ...state, detailsUserCard: payload };
     }
 
