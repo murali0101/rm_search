@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import { getData, getPaginatedData } from "../../redux/homePage/action";
-import { BasicUserCard } from "../BasicUserCard/BasicUserCard";
-import { SearchBar } from "../SearchBar/SearchBar";
-import { useDispatch, useSelector } from "react-redux";
-import { Box, Heading, Spinner, useToast } from "@chakra-ui/react";
 import React, { Suspense } from "react";
+import { Box, Heading, Spinner, useToast } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useRef } from "react";
+import { getData, getPaginatedData } from "../../redux/homePage/action";
+import { SearchBar } from "../SearchBar/SearchBar";
+import { BasicUserCard } from "../BasicUserCard/BasicUserCard";
 
 const DetailsUserCard = React.lazy(() =>
   import("../DetailsUserCard/DetailsUserCard")
@@ -16,14 +16,15 @@ export const HomePage = () => {
 
   const toast = useToast();
 
+  useEffect(() => {
+    dispatch(getData([null, 1]));
+  }, []);
+
   const results = useSelector((state) => state.homePage.results);
   const info = useSelector((state) => state.homePage.info);
 
   // console.log("results:", results);
   // console.log("info:", info);
-  useEffect(() => {
-    dispatch(getData([null, 1]));
-  }, []);
 
   function scrollToEnd(info, toast) {
     dispatch(getPaginatedData(info, toast));
@@ -48,6 +49,7 @@ export const HomePage = () => {
             <Suspense fallback={<div></div>}>
               <DetailsUserCard />
             </Suspense>
+
             <Heading
               as="h6"
               fontSize={47}
@@ -57,6 +59,7 @@ export const HomePage = () => {
             >
               Rick and Morty Search
             </Heading>
+
             <br />
             <br />
             <SearchBar />
@@ -85,7 +88,6 @@ function MyThrottling(cb, delay) {
   return function (...args) {
     if (interval) {
       interval = false;
-
       cb(...args);
       setTimeout(() => {
         interval = true;

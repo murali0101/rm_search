@@ -5,4 +5,5 @@ import { homePageReducer } from "../homePage/reducer";
 const rootReducer = combineReducers({
   homePage: homePageReducer,
 });
-export const store = legacy_createStore(rootReducer,applyMiddleware(thunk));
+
+export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));

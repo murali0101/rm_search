@@ -2,7 +2,6 @@ import {
   ADD_DATA,
   ADD_DATA_DETAILS_USER_CARD_DATA,
   ADD_PAGINATED_DATA,
-
   DETAILS_USER_CARD,
 } from "./actionType";
 
@@ -11,7 +10,6 @@ const init = {
   results: [],
   detailsUserCard: false,
   detailsUserCardData: {},
- 
 };
 
 export const homePageReducer = (state = init, { type, payload }) => {
@@ -19,6 +17,7 @@ export const homePageReducer = (state = init, { type, payload }) => {
     case ADD_DATA: {
       return { ...state, results: payload.results, info: payload.info };
     }
+
     case DETAILS_USER_CARD: {
       return {
         ...state,
@@ -26,6 +25,7 @@ export const homePageReducer = (state = init, { type, payload }) => {
         detailsUserCardData: payload[1],
       };
     }
+
     case ADD_DATA_DETAILS_USER_CARD_DATA: {
       return { ...state, detailsUserCardData: payload };
     }

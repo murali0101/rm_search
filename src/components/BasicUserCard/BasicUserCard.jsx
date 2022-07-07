@@ -1,13 +1,12 @@
 import { Box, Avatar, Text, Spacer, Flex } from "@chakra-ui/react";
-import { useDispatch, useSelector } from "react-redux";
-
+import { useDispatch } from "react-redux";
 import { detailsUserCard } from "../../redux/homePage/action";
+
 export const BasicUserCard = ({ props }) => {
-  // console.log(props);
-  // console.log('dr:-----------------------')
   const { name, species, image, status } = props;
- 
+
   const dispatch = useDispatch();
+
   return (
     <>
       <Flex
@@ -16,8 +15,7 @@ export const BasicUserCard = ({ props }) => {
         p={5}
         alignItems="center"
         onClick={() => {
-          dispatch(detailsUserCard([true,props]));
-    
+          dispatch(detailsUserCard([true, props]));
         }}
         _hover={{ cursor: "pointer" }}
       >

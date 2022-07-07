@@ -1,19 +1,22 @@
-import { Input, InputGroup, InputLeftElement,useToast } from "@chakra-ui/react";
+import {
+  Input,
+  InputGroup,
+  InputLeftElement,
+  useToast,
+} from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addSearch, getData } from "../../redux/homePage/action";
+import { useDispatch } from "react-redux";
+import { getData } from "../../redux/homePage/action";
 
 export const SearchBar = () => {
   const dispatch = useDispatch();
-  const toast = useToast()
 
- 
+  const toast = useToast();
+
   const handleChange = MyDebouncing((e) => {
     console.log(e.target.value);
-    dispatch(getData([e.target.value,1, toast]))
-   
-  }, 2*1000);
+    dispatch(getData([e.target.value, 1, toast]));
+  }, 2 * 1000);
 
   return (
     <>
@@ -45,7 +48,7 @@ function MyDebouncing(cb, delay) {
       clearTimeout(interval);
     }
     interval = setTimeout(() => {
-      cb(...args)
+      cb(...args);
     }, delay);
   };
 }
