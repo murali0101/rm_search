@@ -12,10 +12,10 @@ export const HomePage = () => {
   const results = useSelector((state) => state.homePage.results);
   const info = useSelector((state) => state.homePage.info);
 
-  console.log("results:", results);
+  // console.log("results:", results);
   console.log("info:", info);
   useEffect(() => {
-    dispatch(getData());
+    dispatch(getData([null,1]));
   }, []);
   return (
     <>

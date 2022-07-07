@@ -25,10 +25,12 @@ export const addDataDetailsUserCardData = (value) => {
 
 export const getData = (value) => async (dispatch) => {
   try {
-    let res = await axios.get(
-      `https://rickandmortyapi.com/api/character/?name=Morty&page=1`
-    );
-    // let res = await axios.get(`https://rickandmortyapi.com/api/character/?${value[0]!=null?"name=morty":""}&page=1`);
+    console.log(value[0]);
+    let url = `https://rickandmortyapi.com/api/character/?${
+      !!value[0] ? `name=${value[0]}` : ""
+    }&${!!value[1] ? `page=1` : ""}`;
+    console.log(url);
+    let res = await axios.get(url);
     dispatch(addData(res.data));
 
     // console.log(res);
