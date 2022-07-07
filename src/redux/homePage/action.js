@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ADD_DATA, ADD_INFO, ADD_RESULTS } from "./actionType";
+import { ADD_DATA, ADD_INFO, ADD_RESULTS, Details_User_Card } from "./actionType";
 
 // export const addResults = (value) => {
 //   return { type: ADD_RESULTS, payload: value };
@@ -9,6 +9,9 @@ import { ADD_DATA, ADD_INFO, ADD_RESULTS } from "./actionType";
 // };
 export const addData = (value) => {
   return { type: ADD_DATA, payload: value };
+};
+export const detailsUserCard = (value) => {
+  return { type: Details_User_Card, payload: value };
 };
 
 export const getData = (page) => async (dispatch) => {
