@@ -1,10 +1,18 @@
-import { ADD_DATA, ADD_DATA_DETAILS_USER_CARD_DATA, DETAILS_USER_CARD } from "./actionType";
+import {
+  ADD_DATA,
+  ADD_DATA_DETAILS_USER_CARD_DATA,
+  ADD_PAGINATED_DATA,
+  ADD_SEARCH,
+  DETAILS_USER_CARD,
+} from "./actionType";
 
 const init = {
   info: {},
   results: [],
   detailsUserCard: false,
-  detailsUserCardData:{}
+  detailsUserCardData: {},
+  search: null,
+  page: 1,
 };
 
 export const homePageReducer = (state = init, { type, payload }) => {
@@ -13,10 +21,24 @@ export const homePageReducer = (state = init, { type, payload }) => {
       return { ...state, results: payload.results, info: payload.info };
     }
     case DETAILS_USER_CARD: {
-      return { ...state, detailsUserCard: payload[0] ,detailsUserCardData: payload[1] };
+      return {
+        ...state,
+        detailsUserCard: payload[0],
+        detailsUserCardData: payload[1],
+      };
     }
     case ADD_DATA_DETAILS_USER_CARD_DATA: {
       return { ...state, detailsUserCardData: payload };
+    }
+    case ADD_SEARCH: {
+      return { ...state, search: payload };
+    }
+    case ADD_PAGINATED_DATA: {
+      return {
+        ...state,
+        results: [...state.results, ...payload.results],
+        info: payload.info,
+      };
     }
 
     default:
