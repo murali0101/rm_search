@@ -14,7 +14,7 @@ export const SearchBar = () => {
   const toast = useToast();
 
   const handleChange = MyDebouncing((e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     dispatch(getData([e.target.value, 1, toast]));
   }, 2 * 1000);
 
