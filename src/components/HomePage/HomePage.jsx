@@ -3,7 +3,7 @@ import { getData } from "../../redux/homePage/action";
 import { BasicUserCard } from "../BasicUserCard/BasicUserCard";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { useDispatch, useSelector } from "react-redux";
-import { Box } from '@chakra-ui/react'
+import { Box, Heading } from "@chakra-ui/react";
 
 export const HomePage = () => {
   const dispatch = useDispatch();
@@ -18,8 +18,12 @@ export const HomePage = () => {
   return (
     <>
       {results ? (
-        <Box>
-          HomePage
+        <Box maxW={550} m={"auto"} mt={20} textAlign="center" >
+          <Heading as="h6" fontSize={47} letterSpacing={1.5}>
+            Rick and Morty Search
+          </Heading>
+          <br />
+          <br />
           <SearchBar />
           <BasicUserCard props={results} />
         </Box>
