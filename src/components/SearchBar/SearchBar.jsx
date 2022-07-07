@@ -20,7 +20,7 @@ export const SearchBar = () => {
 
   return (
     <>
-      <InputGroup bg="#FFFFFF" maxW={450} m={"auto"}>
+      <InputGroup bg="#FFFFFF" w={[350, 450]} m={"auto"}>
         <InputLeftElement
           h={55}
           pointerEvents="none"

@@ -52,7 +52,7 @@ export const HomePage = () => {
 
             <Heading
               as="h6"
-              fontSize={47}
+              fontSize={{ base: 30, md: 47 , lg: 47 }}
               letterSpacing={1.5}
               textAlign="center"
               pt={20}
@@ -63,7 +63,7 @@ export const HomePage = () => {
             <br />
             <br />
             <SearchBar />
-            <Box maxW={450} m={"auto"} mt={5} textAlign="left">
+            <Box w={[350, 450]} m={"auto"} mt={5} textAlign="left">
               {results.map((ele, ind) => (
                 <BasicUserCard props={ele} key={ind} />
               ))}

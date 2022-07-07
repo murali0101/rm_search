@@ -31,7 +31,7 @@ function DetailsUserCard() {
             display={detailsUserCardTrack ? "block" : "none"}
           >
             <Box
-              w={400}
+              w={[350, 450]}
               bg="#FFFFFF"
               pos="absolute"
               top="50%"
@@ -72,7 +72,7 @@ function DetailsUserCard() {
                 <Divider borderColor="#748772" mt={4} />
                 <Box>
                   <Flex w="100%" alignItems={"center"} mt={5} mb={6} ml={3}>
-                    <Box w="50%">
+                    <Box w="50%" alignSelf={"flex-start"}>
                       <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                         Gender
                       </Text>
@@ -80,7 +80,7 @@ function DetailsUserCard() {
                         {gender}
                       </Text>
                     </Box>
-                    <Box w="50%">
+                    <Box w="50%" alignSelf={"flex-start"}>
                       <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                         Location
                       </Text>
@@ -90,7 +90,7 @@ function DetailsUserCard() {
                     </Box>
                   </Flex>
                   <Flex w="100%" alignItems={"center"} ml={3}>
-                    <Box w="50%">
+                    <Box w="50%" alignSelf={"flex-start"}>
                       <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                         Species
                       </Text>
@@ -99,7 +99,7 @@ function DetailsUserCard() {
                       </Text>
                     </Box>
 
-                    <Box w="50%">
+                    <Box w="50%" alignSelf={"flex-start"}>
                       <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                         Origin
                       </Text>

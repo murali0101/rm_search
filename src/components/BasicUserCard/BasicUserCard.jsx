@@ -27,7 +27,7 @@ export const BasicUserCard = ({ props }) => {
         </Box>
         <Spacer />
 
-        <Box w="100%" display={"flex"} alignItems="center">
+        <Box w="100%" display={"flex"} alignItems="center" ml={[4, 2]}>
           <Box
             bg={status == "Alive" ? `#00DD74` : `#9EADC3`}
             borderRadius={5}
