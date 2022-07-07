@@ -25,9 +25,7 @@ export const detailsUserCard = (value) => {
 export const addDataDetailsUserCardData = (value) => {
   return { type: ADD_DATA_DETAILS_USER_CARD_DATA, payload: value };
 };
-export const addSearch = (value) => {
-  return { type:ADD_SEARCH, payload: value };
-};
+
 export const addPaginatedData = (value) => {
   return { type:ADD_PAGINATED_DATA, payload: value };
 };

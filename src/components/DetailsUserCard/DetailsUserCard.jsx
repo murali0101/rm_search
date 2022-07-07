@@ -1,8 +1,9 @@
 import { Box, Avatar, Flex, Text, Divider } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { CloseIcon } from "@chakra-ui/icons";
+
 import { detailsUserCard } from "../../redux/homePage/action";
-export const DetailsUserCard = ({ props }) => {
+ function DetailsUserCard(){
   const detailsUserCardTrack = useSelector(
     (state) => state.homePage.detailsUserCard
   );
@@ -11,12 +12,15 @@ export const DetailsUserCard = ({ props }) => {
   );
   const { name, species, image, status, origin, gender, location } =
     detailsUserCardDataTrack;
-  // console.log("detailsUserCardDataTrack:", detailsUserCardDataTrack, origin);
-  const dispatch = useDispatch();
-  // console.log('detailsUserCard:', detailsUserCard)
+
+   const dispatch = useDispatch();
+
+  console.log('detailsUserCard:-----------------------')
+ 
   return (
+
     <>
-      {true ? (
+      {true ?    <>
         <Box
           w={"100%"}
           h={"100%"}
@@ -44,6 +48,7 @@ export const DetailsUserCard = ({ props }) => {
               _hover={{ cursor: "pointer" }}
               onClick={() => {
                 dispatch(detailsUserCard([false, {}]));
+                
               }}
             />
             <Box m={8}>
@@ -108,9 +113,11 @@ export const DetailsUserCard = ({ props }) => {
             </Box>
           </Box>
         </Box>
-      ) : (
+        </> : (
         "loading....."
       )}
     </>
   );
 };
+
+export default DetailsUserCard

@@ -11,8 +11,7 @@ const init = {
   results: [],
   detailsUserCard: false,
   detailsUserCardData: {},
-  search: null,
-  page: 1,
+ 
 };
 
 export const homePageReducer = (state = init, { type, payload }) => {
@@ -30,9 +29,7 @@ export const homePageReducer = (state = init, { type, payload }) => {
     case ADD_DATA_DETAILS_USER_CARD_DATA: {
       return { ...state, detailsUserCardData: payload };
     }
-    case ADD_SEARCH: {
-      return { ...state, search: payload };
-    }
+
     case ADD_PAGINATED_DATA: {
       return {
         ...state,

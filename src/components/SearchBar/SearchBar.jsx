@@ -7,12 +7,11 @@ import { addSearch, getData } from "../../redux/homePage/action";
 export const SearchBar = () => {
   const dispatch = useDispatch();
   const search = useSelector((state) => state.homePage.search);
-  // const [data , setData]=useState()
-  // useEffect(() => {}, []);
+ 
   const handleChange = MyDebounce((e) => {
     console.log(e.target.value);
-    dispatch(getData([e.target.value]))
-    // dispatch(addSearch(e.target.value))
+    dispatch(getData([e.target.value,1]))
+   
   }, 2*1000);
 
   return (
