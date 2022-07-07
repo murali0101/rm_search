@@ -1,4 +1,4 @@
-import { Box, HStack, Avatar, Text, Spacer, Flex } from "@chakra-ui/react";
+import { Box, Avatar, Text, Spacer, Flex } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { detailsUserCard } from "../../redux/homePage/action";

@@ -3,8 +3,9 @@ import { getData, getPaginatedData } from "../../redux/homePage/action";
 import { BasicUserCard } from "../BasicUserCard/BasicUserCard";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { useDispatch, useSelector } from "react-redux";
-import { Box, Heading, VStack, Spinner } from "@chakra-ui/react";
+import { Box, Heading, Spinner, useToast } from "@chakra-ui/react";
 import React, { Suspense } from "react";
+import { useRef } from "react";
 
 const DetailsUserCard = React.lazy(() =>
   import("../DetailsUserCard/DetailsUserCard")
@@ -13,25 +14,29 @@ const DetailsUserCard = React.lazy(() =>
 export const HomePage = () => {
   const dispatch = useDispatch();
 
+  const toast = useToast();
+
   const results = useSelector((state) => state.homePage.results);
   const info = useSelector((state) => state.homePage.info);
 
   // console.log("results:", results);
-  console.log("info:", info);
+  // console.log("info:", info);
   useEffect(() => {
     dispatch(getData([null, 1]));
   }, []);
 
-  const scrollToEnd = () => {
-    dispatch(getPaginatedData(info.next));
-  };
+  function scrollToEnd(info, toast) {
+    dispatch(getPaginatedData(info, toast));
+  }
+
+  const ref = useRef(MyThrottling(scrollToEnd, 2 * 1000));
 
   window.onscroll = function () {
     if (
       window.innerHeight + document.documentElement.scrollTop ===
       document.documentElement.offsetHeight
     ) {
-      scrollToEnd();
+      ref.current(info.next, toast);
     }
   };
 
@@ -74,3 +79,17 @@ export const HomePage = () => {
     </>
   );
 };
+
+function MyThrottling(cb, delay) {
+  let interval = true;
+  return function (...args) {
+    if (interval) {
+      interval = false;
+
+      cb(...args);
+      setTimeout(() => {
+        interval = true;
+      }, delay);
+    }
+  };
+}

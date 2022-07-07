@@ -2,7 +2,7 @@ import {
   ADD_DATA,
   ADD_DATA_DETAILS_USER_CARD_DATA,
   ADD_PAGINATED_DATA,
-  ADD_SEARCH,
+
   DETAILS_USER_CARD,
 } from "./actionType";
 

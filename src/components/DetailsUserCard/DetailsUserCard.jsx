@@ -15,7 +15,7 @@ import { detailsUserCard } from "../../redux/homePage/action";
 
    const dispatch = useDispatch();
 
-  console.log('detailsUserCard:-----------------------')
+  // console.log('detailsUserCard:-----------------------')
  
   return (
 
@@ -72,7 +72,7 @@ import { detailsUserCard } from "../../redux/homePage/action";
               </Flex>
               <Divider borderColor="#748772" mt={4} />
               <Box>
-                <Flex w="100%" alignItems={"center"} mt={5} mb={6}>
+                <Flex w="100%" alignItems={"center"} mt={5} mb={6}  ml={3}>
                   <Box w="50%">
                     <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                       Gender
@@ -90,7 +90,7 @@ import { detailsUserCard } from "../../redux/homePage/action";
                     </Text>
                   </Box>
                 </Flex>
-                <Flex w="100%" alignItems={"center"}>
+                <Flex w="100%" alignItems={"center"} ml={3}>
                 <Box w="50%">
                     <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                       Species
