@@ -19,7 +19,7 @@ function DetailsUserCard() {
 
   return (
     <>
-      {detailsUserCardTrack  ? (
+      {detailsUserCardTrack ? (
         <>
           <Box
             w={"100%"}
@@ -113,9 +113,7 @@ function DetailsUserCard() {
             </Box>
           </Box>
         </>
-      ) : (
-        null
-      )}
+      ) : null}
     </>
   );
 }
