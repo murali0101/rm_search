@@ -13,10 +13,10 @@ export const homePageReducer = (state = init, { type, payload }) => {
       return { ...state, results: payload.results, info: payload.info };
     }
     case DETAILS_USER_CARD: {
-      return { ...state, detailsUserCard: payload };
+      return { ...state, detailsUserCard: payload[0] ,detailsUserCardData: payload[1] };
     }
     case ADD_DATA_DETAILS_USER_CARD_DATA: {
-      return { ...state, detailsUserCard: payload };
+      return { ...state, detailsUserCardData: payload };
     }
 
     default:
