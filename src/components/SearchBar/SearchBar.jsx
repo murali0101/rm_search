@@ -20,7 +20,7 @@ export const SearchBar = () => {
           h={55}
           pointerEvents="none"
           children={<SearchIcon color="gray.300" />}
-          zIndex={1}
+          zIndex={2}
         />
         <Input
           type="tel"

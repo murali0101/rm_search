@@ -23,7 +23,7 @@ export const DetailsUserCard = ({ props }) => {
           bg="#88888a53"
           p={1}
           pos="fixed"
-          zIndex={2}
+          zIndex={3}
           display={detailsUserCardTrack ? "block" : "none"}
         >
           <Box
@@ -66,9 +66,9 @@ export const DetailsUserCard = ({ props }) => {
                 </Box>
               </Flex>
               <Divider borderColor="#748772" mt={4} />
-              <Flex>
-                <Box w="100%" ml={3}>
-                  <Box mb={2} mt={5}>
+              <Box>
+                <Flex w="100%" alignItems={"center"} mt={5} mb={6}>
+                  <Box w="50%">
                     <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                       Gender
                     </Text>
@@ -76,17 +76,7 @@ export const DetailsUserCard = ({ props }) => {
                       {gender}
                     </Text>
                   </Box>
-                  <Box mb={2} mt={6}>
-                    <Text color="#9EADC3" fontSize={14} fontWeight={600}>
-                      Species
-                    </Text>
-                    <Text fontSize={16} fontWeight={600}>
-                      {species}
-                    </Text>
-                  </Box>
-                </Box>
-                <Box w="100%">
-                  <Box mb={2} mt={5}>
+                  <Box w="50%">
                     <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                       Location
                     </Text>
@@ -94,7 +84,18 @@ export const DetailsUserCard = ({ props }) => {
                       {location?.name}
                     </Text>
                   </Box>
-                  <Box mb={2} mt={6}>
+                </Flex>
+                <Flex w="100%" alignItems={"center"}>
+                <Box w="50%">
+                    <Text color="#9EADC3" fontSize={14} fontWeight={600}>
+                      Species
+                    </Text>
+                    <Text fontSize={16} fontWeight={600}>
+                      {species}
+                    </Text>
+                  </Box>
+                  
+                  <Box w="50%">
                     <Text color="#9EADC3" fontSize={14} fontWeight={600}>
                       Origin
                     </Text>
@@ -102,8 +103,8 @@ export const DetailsUserCard = ({ props }) => {
                       {origin?.name}
                     </Text>
                   </Box>
-                </Box>
-              </Flex>
+                </Flex>
+              </Box>
             </Box>
           </Box>
         </Box>
