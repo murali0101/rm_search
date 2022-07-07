@@ -8,6 +8,7 @@ export const SearchBar = () => {
         <InputLeftElement h={55}
           pointerEvents="none"
           children={<SearchIcon color="gray.300" />}
+          zIndex={1}
         />
         <Input type="tel" placeholder="Search for a contact" border={0} borderRadius={0} h={55} _placeholder={{color:"gray.300"}} />
       </InputGroup>
