@@ -41,6 +41,7 @@
 
 ## 🚀 Network
 
+![rm_network](https://user-images.githubusercontent.com/66964293/177933677-8cd01b99-8be0-41a9-b261-66ea6002cbb5.gif)
 
 
 <br />
