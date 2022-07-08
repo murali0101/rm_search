@@ -48,7 +48,7 @@ export const HomePage = () => {
       {results.length != 0 ? (
         <>
           <Box w="100%" m={"auto"}>
-            <Suspense fallback={<div>muralili....</div>}>
+            <Suspense fallback={<div></div>}>
               <DetailsUserCard />
             </Suspense>
 
