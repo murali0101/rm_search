@@ -23,11 +23,12 @@
   
   Rick and Morty Autocomplete Search is an web application that allows you to  Search Rick ,Morty and other humans.
 
+ ![rm](https://user-images.githubusercontent.com/66964293/177929299-517f6361-5d79-4e57-8e0d-d0dc8d393527.gif)
+
   <br />
   
-  ## Screens ( All screens are responsive along with Dark Mode)
+  ## Screens ( All screens are responsive )
    - Homepage
-
 <br />
 
 ## 🚀 Features
@@ -38,25 +39,23 @@
 
 <br />
 
+
 ## Glimpses of rm-Search 🙈 :
 
 <table>
   <tr>
-    <td><img src="" alt="" /></td>
-    <td><img src="" alt="" /></td>
+    <td><img src="https://user-images.githubusercontent.com/66964293/177928489-28d491fb-04f3-4e5b-8b0b-a1620ff5753c.png" alt="home" /></td>
+    <td><img src="https://user-images.githubusercontent.com/66964293/177928639-5dc79934-a055-48f0-aa41-8b829ef3ae11.png" alt="DetailsUserCard" /></td>
   </tr>
   <tr>
-  <td><img src="" alt="" /></td>
-    <td><img src="" alt="" /></td>
+  <td><img src="https://user-images.githubusercontent.com/66964293/177928738-76f1bc9e-3001-4321-9a3e-c3306eddf618.PNG" alt="Search" /></td>
+    <td><img src="https://user-images.githubusercontent.com/66964293/177928810-7af382c3-434b-4476-9d72-ea8359966f4c.PNG" alt="DataNotFound" /></td>
   </tr>
   <tr>
- <td><img src="" alt="" /></td>
-    <td><img src="" alt="" /></td>
+ <td><img src="https://user-images.githubusercontent.com/66964293/177928721-15fbc4ea-2d40-401f-8ec2-bbd8c12ae3e3.PNG" alt="You Reached The End Page" /></td>
+    <td><img src="https://user-images.githubusercontent.com/66964293/177928907-985d01f1-4938-44ba-9ce2-aedfa1a66a8e.PNG" alt="Loading" /></td>
   </tr>
-  <tr>
-  <td><img src="" alt="" /></td>
-    <td><img src="" alt="" /></td>
-  </tr>
+
 </table>
 
 <br />
