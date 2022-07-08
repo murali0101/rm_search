@@ -26,9 +26,23 @@
  ![rm](https://user-images.githubusercontent.com/66964293/177929299-517f6361-5d79-4e57-8e0d-d0dc8d393527.gif)
 
   <br />
-  
+
+
   ## Screens ( All screens are responsive )
    - Homepage
+  
+  <table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/66964293/177934598-4e007e0e-fc49-408f-961f-96dfbac86f5e.PNG" alt="rm-r1" /></td>
+    <td><img src="https://user-images.githubusercontent.com/66964293/177934881-448046a4-4a7e-47b8-9c6c-9da548200087.PNG" alt="rm-r2" /></td>
+  </tr>
+  <tr>
+  <td><img src="https://user-images.githubusercontent.com/66964293/177934912-d61a6246-5a76-44e9-a8a8-b8768961c847.PNG" alt="rm-r3" /></td>
+    <td><img src="https://user-images.githubusercontent.com/66964293/177934938-fad5e92e-01a4-4c9d-9268-c3c27aebe4d0.PNG" alt="rm-r4" /></td>
+  </tr>
+
+
+</table>
 <br />
 
 ## 🚀 Features
