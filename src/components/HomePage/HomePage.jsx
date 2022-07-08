@@ -7,11 +7,11 @@ import { getData, getPaginatedData } from "../../redux/homePage/action";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { BasicUserCard } from "../BasicUserCard/BasicUserCard";
 import { MyThrottling } from "../../utils/extrafunctions";
-
-
 const DetailsUserCard = React.lazy(() =>
   import("../DetailsUserCard/DetailsUserCard")
 );
+
+
 
 export const HomePage = () => {
   const dispatch = useDispatch();
@@ -48,7 +48,7 @@ export const HomePage = () => {
       {results.length != 0 ? (
         <>
           <Box w="100%" m={"auto"}>
-            <Suspense fallback={<div></div>}>
+            <Suspense fallback={<div>muralili....</div>}>
               <DetailsUserCard />
             </Suspense>
 

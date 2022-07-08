@@ -16,7 +16,7 @@ function DetailsUserCard() {
 
   const { name, species, image, status, origin, gender, location } =
     detailsUserCardDataTrack;
-
+    // console.log("details")
   return (
     <>
       {detailsUserCardTrack ? (

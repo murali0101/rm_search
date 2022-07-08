@@ -6,7 +6,7 @@ export const BasicUserCard = ({ props }) => {
   const { name, species, image, status } = props;
 
   const dispatch = useDispatch();
-
+  //  console.log("basic")
   return (
     <>
       <Flex
