@@ -53,9 +53,10 @@ export const HomePage = () => {
             <Heading
               as="h6"
               fontSize={{ base: 30, md: 47 , lg: 47 }}
-              letterSpacing={1.5}
+              
               textAlign="center"
               pt={20}
+              fontFamily={"Arial, Helvetica, sans-serif"}
             >
               Rick and Morty Search
             </Heading>

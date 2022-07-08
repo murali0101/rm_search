@@ -31,7 +31,7 @@ function DetailsUserCard() {
             display={detailsUserCardTrack ? "block" : "none"}
           >
             <Box
-              w={[350, 450]}
+              w={[350, 400]}
               bg="#FFFFFF"
               pos="absolute"
               top="50%"

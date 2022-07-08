@@ -5,7 +5,7 @@ export const theme = extendTheme({
     global: () => ({
       body: {
         bg: "#F5F6F8",
-        fontFamily: "'Source Sans Pro', sans-serif",
+        fontFamily: "Arial, Helvetica, sans-serif",
       },
     }),
   },
