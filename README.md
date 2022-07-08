@@ -47,7 +47,7 @@
 
 ## 🚀 Features
 
-- Search Functionality With Debouncing Functionality
+- Search Bar With Debouncing Functionality
 - Pagination With Infinite Scroll And Throttling Functionality
 - React Components With Lazy Loading
 
