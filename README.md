@@ -1,6 +1,6 @@
 <h1 align="center">Rick and Morty Autocomplete Search</h1> 
 
-<h2 align="center">It's a MERN Stack  web application with all the major functionalities</h2>
+<h2 align="center">It's a web application with some functionalities</h2>
 
 <br />
 <p align="center">
@@ -46,7 +46,7 @@
 
 <br />
 
-## Glimpses of E-Store 🙈 :
+## Glimpses of rm-Search 🙈 :
 
 <table>
   <tr>
@@ -81,7 +81,7 @@
 
 ## Getting Started
 
-This project was built using React v 18.2.0, Redux v 4.2.0, Chakra UI, CSS, JavaScript, Rest API, Node JS, Express and MongoDB. It is  web application and for running on your local environment you should follow these guidelines.
+This project was built using React v 18.2.0, Redux v 4.2.0, Chakra UI, CSS, JavaScript and HTML. It is  web application and for running on your local environment you should follow these guidelines.
 
 
 ### Prerequisites

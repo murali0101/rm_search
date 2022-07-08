@@ -6,6 +6,8 @@ import { useRef } from "react";
 import { getData, getPaginatedData } from "../../redux/homePage/action";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { BasicUserCard } from "../BasicUserCard/BasicUserCard";
+import { MyThrottling } from "../../utils/extrafunctions";
+
 
 const DetailsUserCard = React.lazy(() =>
   import("../DetailsUserCard/DetailsUserCard")
@@ -84,15 +86,4 @@ export const HomePage = () => {
   );
 };
 
-function MyThrottling(cb, delay) {
-  let interval = true;
-  return function (...args) {
-    if (interval) {
-      interval = false;
-      cb(...args);
-      setTimeout(() => {
-        interval = true;
-      }, delay);
-    }
-  };
-}
+

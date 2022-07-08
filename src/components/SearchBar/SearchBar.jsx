@@ -7,6 +7,7 @@ import {
 import { SearchIcon } from "@chakra-ui/icons";
 import { useDispatch } from "react-redux";
 import { getData } from "../../redux/homePage/action";
+import { MyDebouncing } from "../../utils/extrafunctions";
 
 export const SearchBar = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,6 @@ export const SearchBar = () => {
   const toast = useToast();
 
   const handleChange = MyDebouncing((e) => {
-    // console.log(e.target.value);
     dispatch(getData([e.target.value, 1, toast]));
   }, 2 * 1000);
 
@@ -40,15 +40,3 @@ export const SearchBar = () => {
     </>
   );
 };
-
-function MyDebouncing(cb, delay) {
-  let interval = null;
-  return function (...args) {
-    if (interval) {
-      clearTimeout(interval);
-    }
-    interval = setTimeout(() => {
-      cb(...args);
-    }, delay);
-  };
-}
