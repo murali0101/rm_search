@@ -28,7 +28,7 @@ export const notify = (toast, title, status, description,position="top") => {
         title,
         status,
         description,
-        duration: 5*1000,
+        duration: 3*1000,
         variant: "top-accent",
         isClosable: true,
         position: `${position}`

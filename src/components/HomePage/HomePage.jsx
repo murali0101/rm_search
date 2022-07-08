@@ -32,7 +32,7 @@ export const HomePage = () => {
     dispatch(getPaginatedData(info, toast));
   }
 
-  const ref = useRef(MyThrottling(scrollToEnd, 2 * 1000));
+  const ref = useRef(MyThrottling(scrollToEnd, 1.5 * 1000));
 
   window.onscroll = function () {
     if (
